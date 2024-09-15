@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Highest Score 2D Array</title>
+</head>
+<body>
+    
+    <script>
+        // var scores = [10, 50, 30, 70, 100, 60, 250];
+        // function highestScore(scores){
+        //     let max = scores[0];
+        //     for(var i=1; i<scores.length;i++){
+        //         if(max < scores[i]){
+        //             max = scores[i];
+        //         }
+        //     }
+        //     return max;
+        // }
+        // let maxScore = highestScore(scores);
+        // document.write(`Maximum Score is : ${maxScore}`);
+
+        var playerInfo = [
+  ['Tamim', 200],
+  ['Riad', 100],
+  ['Nahid', 70]
+]
+
+function highestScore(playerInfo){
+  maxScorer = playerInfo[0][0];
+  maxScore = playerInfo[0][1];
+  for(var x = 1; x < playerInfo.length; x++){
+    if(maxScore < playerInfo[x][1]){
+      maxScore = playerInfo[x][1];
+      maxScorer = playerInfo[x][0];
+     // console.log(maxScore, maxScorer);
+    }
+    return maxScorer + " " + maxScore;
+  }
+  
+}
+
+let player = highestScore(playerInfo);
+document.write(player);
+    </script>
+</body>
+</html>

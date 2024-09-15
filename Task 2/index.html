@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make your own calculator</title>
+</head>
+<body>
+    
+    <script>
+        var num1, num2, add, sub, mul, div, rem;
+        num1 = parseInt(prompt('Enter first number : '));
+        num2 = parseInt(prompt('Enter second number : '));
+
+        add = num1 + num2;
+        sub = num1 - num2;
+        mul = num1 * num2;
+        div = num1 / num2;
+        rem = num1 % num2;
+
+        document.write("Addition : "+ num1 + " + " + num2 + " = " + add + "</br>" +
+            "Subtraction : "+ num1 + " - " + num2 + " = "  + sub + "</br>" + 
+            "Multiplication : "+ num1 + " * " + num2 + " = "  + mul + "</br>" + 
+            "Division : "+ num1 + " / " + num2 + " = "  + div + "</br>" + 
+            "Remainder : "+ num1 + " % " + num2 + " = "  + rem + "</br>"
+        )
+    </script>
+</body>
+</html>

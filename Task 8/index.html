@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Highest Score</title>
+</head>
+<body>
+    
+    <script>
+        // var scores = [10, 50, 30, 70, 100, 60, 250];
+        // function highestScore(scores){
+        //     var sortedScore = scores.sort(function(a,b){
+        //     return b -a;
+        // })
+        // return sortedScore[0];
+        // }
+
+        // let result = highestScore(scores);
+        // document.write(result);
+
+        var scores = [10, 50, 30, 70, 100, 60, 250];
+        function highestScore(scores){
+            let max = scores[0];
+            for(var i=1; i<scores.length;i++){
+                if(max < scores[i]){
+                    max = scores[i];
+                }
+            }
+            return max;
+        }
+        let maxScore = highestScore(scores);
+        document.write(`Maximum Score is : ${maxScore}`);
+    </script>
+</body>
+</html>
