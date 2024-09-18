@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>You haven't press any button</h1>
+        <button>A</button>
+        <button>B</button>
+        <button>C</button>
+      </div>
+    <script>
+        let buttons = document.querySelectorAll('button');
+        for(var i=0; i<buttons.length; i++){
+            buttons[i].addEventListener('click',(e)=>{
+                var text = e.target.innerHTML;
+                console.log(text);
+                switch(text){
+                    case 'A' :
+                    var audio = new Audio('./sounds/Letter_a.mp3');
+                    audio.play();
+                    break;
+                    case 'B' :
+                    var audio = new Audio('./sounds/Letter_b.mp3');
+                    audio.play();
+                    break;
+                    case 'C' :
+                    var audio = new Audio('./sounds/Letter_c.mp3');
+                    audio.play();
+                    break;
+                }
+                
+            })
+        }
+        // var btns = document.querySelectorAll('button');
+        // var header = document.querySelector('h1');
+        // for(var i=0; i<btns.length;i++){          
+        //     btns[i].addEventListener('click', (e)=>{
+        //         var text = e.target.innerHTML;
+        //     header.textContent = `You have pressed ${text}`;
+        // })
+        // }
+        
+    </script>
+</body>
+</html>
